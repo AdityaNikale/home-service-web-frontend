@@ -21,6 +21,9 @@ export default function HomeServicePage() {
     
     try {
       const res = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/api/search?keyword=${keyword}&location=${location}`);
+
+      console.log(`message -----${process.env.REACT_APP_API_BASE_URL}/api/search?keyword=${keyword}&location=${location}`);
+
       navigate('/results', { state: { results: res.data } });
     } catch (error) {
       console.log('Error searching:', error);
