@@ -19,8 +19,9 @@ export default function App() {
         <Route path="/" element={<HomeServicePage />} />
         <Route path="/login" element={<LoginSignupPage />} />
 
+        {/* this is protected route  */}
         <Route element={<ProtectedRoute />}>
-        <Route path="/book/:id" element={<BookingPage />} />
+        <Route path="/book/:id" element={<BookingPage />} /> 
         </Route>
 
         <Route path="/results" element={<ServicesListPage />} />
