@@ -1,4 +1,3 @@
-// App.jsx
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomeServicePage from "./components/HomeServicePage";
 import BookingPage from "./components/BookingPage";
@@ -14,9 +13,9 @@ import "react-toastify/dist/ReactToastify.css";
 
 export default function App() {
   return (
-    <Router basename="/">
+    <Router>
+      <ToastProvider />
       <Routes>
-        <ToastProvider />
         <Route path="/" element={<HomeServicePage />} />
         <Route path="/login" element={<LoginSignupPage />} />
 
