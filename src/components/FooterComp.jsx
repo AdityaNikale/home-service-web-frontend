@@ -19,8 +19,8 @@ const FooterComp = () => {
             <Col md={4}>
               <h6>Quick Links</h6>
               <ul className="list-unstyled">
-                <li><a href="/about" className="text-light">About Us</a></li>
-                <li><a href="/terms" className="text-light">Terms & Privacy</a></li>
+                <li><Link to="/about" className="text-light">About Us</Link></li>
+                <li><Link to="/terms" className="text-light">Terms & Privacy</Link></li>
               </ul>
             </Col>
             <Col md={4}>
