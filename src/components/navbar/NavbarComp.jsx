@@ -2,6 +2,8 @@ import { Container, Navbar, Nav, Button } from "react-bootstrap"
 import { useNavigate } from 'react-router-dom';
 import { useLogin } from "./LoginContext";
 import { toast } from 'react-toastify';
+import { Link } from "react-router-dom";
+import { Nav } from "react-bootstrap";
 
 
 const NavbarComp = () => {
@@ -27,8 +29,8 @@ const NavbarComp = () => {
             <Nav className="ms-auto align-items-center">
               <Nav.Link href="/">Home</Nav.Link>
               {/* <Nav.Link href="#services">Services</Nav.Link> */}
-              <Nav.Link href="/about">About</Nav.Link>
-              <Nav.Link href="/contact">Contact</Nav.Link>
+              <Nav.Link as={Link} to="/about">About</Nav.Link>
+              <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
               {isLoggedIn ? (
                 <Button variant="outline-danger" className="ms-3" onClick={handleLogout}>Logout</Button>
               ) : 
