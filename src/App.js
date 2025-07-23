@@ -14,8 +14,9 @@ import "react-toastify/dist/ReactToastify.css";
 
 export default function App() {
   return (
-    <Router>
+    <Router basename="/">
       <Routes>
+        <ToastProvider />
         <Route path="/" element={<HomeServicePage />} />
         <Route path="/login" element={<LoginSignupPage />} />
 
@@ -29,7 +30,6 @@ export default function App() {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/terms" element={<TermsPrivacyPage />} />
       </Routes>
-      <ToastProvider />
     </Router>
   );
 }
