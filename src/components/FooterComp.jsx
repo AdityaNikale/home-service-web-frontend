@@ -5,11 +5,14 @@ import {
   Twitter,
   Linkedin,
 } from "lucide-react";
+import { Link } from "react-router-dom";
+
 
 const FooterComp = () => {
   return (
     <>
       <footer className="bg-dark text-light mt-auto py-5">
+
         <Container>
           <Row>
             <Col md={4}>
